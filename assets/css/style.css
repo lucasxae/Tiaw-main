@@ -150,7 +150,7 @@ td {
 }
 
 th {
-  background-color: #033305;
+  background-color: #033305; 
   color: white;
 }
 
@@ -174,7 +174,8 @@ label{
 }
 footer{
     
-  background-color: 257008;
+  background-color: #033305;
+   
 }
 
 #qq{
