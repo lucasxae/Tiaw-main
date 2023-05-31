@@ -34,18 +34,19 @@ function showData() {
 	output.innerHTML = '<h2>Dados Salvos</h2>';
 
 	if (data.length > 0) {
-		let table = '<table><tr><th>Usuario</th><th>Titulo</th><th>Descricao</th><th>Autor</th><th>Texto</th><th>Ação</th></tr>';
+		let table = '<div class="table-responsive"><table class="table"><thead><tr><th>Usuário</th><th>Título</th><th>Descrição</th><th>Autor</th><th>Texto</th><th>Ação</th></tr></thead><tbody>';
 
 		for (let i = 0; i < data.length; i++) {
 			table += '<tr><td>' + data[i].usuario + '</td><td>' + data[i].titulo + '</td><td>' + data[i].descricao + '</td><td>' + data[i].autor + '</td><td>' + data[i].texto + '</td><td><button onclick="editData(' + i + ')">Editar</button> <button onclick="deleteData(' + i + ')">Excluir</button></td></tr>';
 		}
 
-		table += '</table>';
+		table += '</tbody></table></div>';
 		output.innerHTML += table;
 	} else {
 		output.innerHTML += '<p>Nenhum dado salvo ainda.</p>';
 	}
 }
+
 
 function saveData(event) {
 	event.preventDefault();
